@@ -1,0 +1,42 @@
+[config]
+# This repo is Udemy course material for learning AWS data engineering techniques,
+# not production code. Keep automated review feedback light and course-relevant.
+
+[pr_reviewer]
+require_score_review = false
+require_tests_review = false
+require_security_review = false
+require_can_be_split_review = false
+require_estimate_effort_to_review = false
+num_code_suggestions = 0
+extra_instructions = """
+This repository holds code written while following a Udemy course on AWS data engineering
+(Lambda, Glue ETL, Redshift/MySQL SQL, Step Functions). It is throwaway learning/demo code,
+not a production system.
+
+Do not flag or comment on:
+- Hardcoded sample/demo values, credentials placeholders, or config meant for local/course use.
+- Missing error handling, logging, retries, tests, or input validation.
+- Security hardening, IAM least-privilege, secrets management, or production readiness.
+- Style, formatting, or "best practice" nitpicks that don't affect whether the course exercise works.
+- Scalability, performance, or cost-optimization suggestions.
+
+Only comment if the code has an actual bug that would stop the exercise from working as the
+course intends.
+"""
+
+[pr_code_suggestions]
+num_code_suggestions = 0
+extra_instructions = """
+Course learning repo (see pr_reviewer instructions) -- skip code suggestions entirely unless
+there is a correctness bug that breaks the exercise.
+"""
+
+[pr_description]
+add_original_user_description = true
+generate_ai_title = false
+
+[pr_questions]
+extra_instructions = """
+Treat this as educational course code, not production code, when answering questions.
+"""
