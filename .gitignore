@@ -218,3 +218,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# macOS
+.DS_Store
+
+# Lambda deployment package and vendored dependencies (regenerate via pip install -r requirements.txt -t .)
+Resources/lambda_function.zip
+Resources/Lambdafunction/*
+!Resources/Lambdafunction/lambda_function.py
